@@ -1,0 +1,515 @@
+/* تنسيقات خاصة بصفحة قيد الإنشاء */
+
+/* رأس الصفحة */
+.page-header {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.back-button {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #f57c00;
+    color: #f57c00;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+    align-self: flex-start;
+}
+
+.back-button:hover {
+    background: #f57c00;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(245, 124, 0, 0.3);
+}
+
+.back-button i {
+    font-size: 1rem;
+}
+
+/* عنوان الصفحة */
+.page-title {
+    text-align: center;
+}
+
+.page-title .title-ar {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-title .title-en {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #e8f5e8;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.page-title .subtitle {
+    font-size: 1.2rem;
+    color: #ffcc80;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* قسم البحث */
+.search-section {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(245, 124, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.search-container:focus-within {
+    border-color: #f57c00;
+    box-shadow: 0 8px 25px rgba(245, 124, 0, 0.3);
+}
+
+.search-icon {
+    color: #f57c00;
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    font-size: 1.1rem;
+    font-family: 'Amiri', serif;
+    background: transparent;
+    color: #333;
+}
+
+.search-input::placeholder {
+    color: #666;
+    font-style: italic;
+}
+
+.clear-search {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    border-radius: 50%;
+}
+
+.clear-search:hover {
+    color: #f44336;
+    background: rgba(244, 67, 54, 0.1);
+}
+
+/* إحصائيات البحث */
+.search-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.stats-text {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stats-text strong {
+    color: #ffcc80;
+    font-weight: 700;
+}
+
+.stats-divider {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+
+/* قسم المشاريع */
+.projects-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* بطاقة المشروع */
+.project-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f57c00 0%, #ff9800 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    border-color: #f57c00;
+    background: rgba(255, 255, 255, 1);
+}
+
+.project-card:active {
+    transform: translateY(-4px) scale(0.98);
+}
+
+/* أيقونة المشروع */
+.project-icon {
+    font-size: 2.5rem;
+    color: #f57c00;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+    transform: scale(1.1) rotate(5deg);
+    color: #e65100;
+}
+
+/* محتوى المشروع */
+.project-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.project-number {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #f57c00;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.project-status {
+    display: inline-block;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    color: #e65100;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(230, 81, 0, 0.2);
+}
+
+/* أيقونات المشاريع المتنوعة */
+.project-card:nth-child(4n+1) .project-icon { color: #2196F3; }
+.project-card:nth-child(4n+2) .project-icon { color: #4CAF50; }
+.project-card:nth-child(4n+3) .project-icon { color: #9C27B0; }
+.project-card:nth-child(4n+4) .project-icon { color: #FF5722; }
+
+.project-card:nth-child(4n+1):hover .project-icon { color: #1976D2; }
+.project-card:nth-child(4n+2):hover .project-icon { color: #388E3C; }
+.project-card:nth-child(4n+3):hover .project-icon { color: #7B1FA2; }
+.project-card:nth-child(4n+4):hover .project-icon { color: #D84315; }
+
+/* رسالة عدم وجود نتائج */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.no-results-content i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.no-results-content h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.no-results-content p {
+    font-size: 1.1rem;
+    color: #e8f5e8;
+    font-style: italic;
+}
+
+/* مؤشر التحميل */
+.loading-indicator {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #f57c00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-indicator p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* تذييل الصفحة */
+.page-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.page-footer .footer-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-footer .footer-text-ar {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.page-footer .footer-text-en {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #e8f5e8;
+    font-style: italic;
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .page-header {
+        margin-bottom: 30px;
+    }
+    
+    .page-title .title-ar {
+        font-size: 2.2rem;
+    }
+    
+    .page-title .title-en {
+        font-size: 1.3rem;
+    }
+    
+    .search-section {
+        margin-bottom: 30px;
+    }
+    
+    .search-input {
+        font-size: 1rem;
+        padding: 12px 10px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .project-card {
+        padding: 20px 15px;
+    }
+    
+    .project-icon {
+        font-size: 2.2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .back-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .search-stats {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .stats-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title .title-ar {
+        font-size: 1.8rem;
+    }
+    
+    .page-title .title-en {
+        font-size: 1.1rem;
+    }
+    
+    .search-container {
+        padding: 3px;
+    }
+    
+    .search-input {
+        font-size: 0.9rem;
+        padding: 10px 8px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .project-card {
+        padding: 18px 12px;
+    }
+    
+    .project-icon {
+        font-size: 2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-number {
+        font-size: 0.8rem;
+    }
+    
+    .project-status {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
+
+/* تأثيرات إضافية */
+.project-card {
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(245, 124, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 152, 0, 0.05) 0%, transparent 50%);
+}
+
+.project-card:hover {
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(245, 124, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 152, 0, 0.1) 0%, transparent 50%);
+}
+
+/* تأثير الظهور التدريجي */
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.project-card:nth-child(n) { animation-delay: calc(var(--index) * 0.05s); }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تحسينات إضافية للتفاعل */
+.search-container.typing {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(245, 124, 0, 0.4);
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(245, 124, 0, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.project-card:hover::after {
+    width: 300px;
+    height: 300px;
+}

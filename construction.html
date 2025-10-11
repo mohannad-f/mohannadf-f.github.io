@@ -1,98 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قيد الإنشاء - BASIRA IMAN</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="construction-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- شريط التذكير بالصلاة على النبي -->
-    <div class="prophet-reminder">
-        <div class="reminder-content">
-            <span class="reminder-ar">صل على النبي محمد 💚</span>
-            <span class="reminder-en">Peace and blessings be upon our Prophet Muhammad 💚</span>
-        </div>
-    </div>
-
-    <div class="container">
-        <!-- العنوان والتنقل -->
-        <header class="page-header">
-            <button class="back-button" onclick="goHome()">
-                <i class="fas fa-arrow-right"></i>
-                <span>العودة للرئيسية</span>
-            </button>
-            
-            <div class="page-title">
-                <h1 class="title-ar">أحاديث نبوية</h1>
-                <h2 class="title-en">Prophetic Hadiths</h2>
-                <p class="subtitle">أحاديث مع شرحها وتوضيحها</p>
-            </div>
-        </header>
-
-        <!-- شريط البحث -->
-        <div class="search-section">
-            <div class="search-container">
-                <i class="fas fa-search search-icon"></i>
-                <input 
-                    type="text" 
-                    id="projectSearch" 
-                    class="search-input" 
-                    placeholder="ابحث عن حديث معين... / Search for a hadith..."
-                >
-                <button class="clear-search" onclick="clearProjectSearch()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <!-- إحصائيات البحث -->
-            <div class="search-stats" id="searchStats">
-                <span class="stats-text">إجمالي الأحاديث: <strong>100</strong></span>
-                <span class="stats-divider">|</span>
-                <span class="stats-text">النتائج المعروضة: <strong id="visibleCount">100</strong></span>
-            </div>
-        </div>
-
-        <!-- قائمة الأحاديث -->
-        <main class="hadiths-section">
-            <div class="hadiths-grid" id="hadithsGrid">
-                <!-- سيتم ملء الأحاديث بواسطة JavaScript -->
-            </div>
-
-            <!-- رسالة عدم وجود نتائج -->
-            <div class="no-results" id="noResults" style="display: none;">
-                <div class="no-results-content">
-                    <i class="fas fa-search"></i>
-                    <h3>لا توجد أحاديث مطابقة</h3>
-                    <p>جرب البحث بكلمات أخرى أو تصفح جميع الأحاديث</p>
-                </div>
-            </div>
-
-            <!-- مؤشر التحميل -->
-            <div class="loading-indicator" id="loadingIndicator">
-                <div class="spinner"></div>
-                <p>جاري تحميل الأحاديث...</p>
-            </div>
-        </main>
-
-        <!-- تذييل الصفحة -->
-        <footer class="page-footer">
-            <div class="footer-content">
-                <p class="footer-text-ar">هذه المشاريع قيد التطوير وستكون متاحة قريباً</p>
-                <p class="footer-text-en">These projects are under development and will be available soon</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- الهلال الإسلامي في الخلفية -->
-    <div class="crescent-background">
-        <i class="fas fa-moon"></i>
-    </div>
-
-    <script src="script.js"></script>
-    <script src="hadiths-script.js"></script>
-</body>
-</html>

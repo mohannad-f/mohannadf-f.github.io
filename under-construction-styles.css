@@ -1,0 +1,419 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', serif;
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c59 50%, #6ba368 100%);
+    min-height: 100vh;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* تذكير الصلاة على النبي */
+.prophet-reminder {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid #4a7c59;
+}
+
+.reminder-ar {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2d5016;
+    margin-bottom: 2px;
+}
+
+.reminder-en {
+    font-size: 0.8rem;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* حاوي الصفحة */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+/* رأس الصفحة */
+.page-header {
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4a7c59;
+    color: #2d5016;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-btn:hover {
+    background: #4a7c59;
+    color: white;
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.header-title {
+    text-align: center;
+}
+
+.title-ar {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.title-en {
+    font-size: 1.3rem;
+    color: #d4e6d4;
+    font-style: italic;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.construction-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    border: 3px solid rgba(74, 124, 89, 0.3);
+}
+
+.construction-icon {
+    font-size: 4rem;
+    color: #4a7c59;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.construction-title-ar {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2d5016;
+    margin-bottom: 10px;
+}
+
+.construction-title-en {
+    font-size: 1.2rem;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.construction-description {
+    margin-bottom: 40px;
+}
+
+.description-ar {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.description-en {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+/* مؤشر التقدم */
+.progress-indicator {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4a7c59, #6ba368);
+    border-radius: 10px;
+    width: 65%;
+    animation: progressAnimation 3s ease-in-out infinite;
+}
+
+@keyframes progressAnimation {
+    0% { width: 45%; }
+    50% { width: 75%; }
+    100% { width: 65%; }
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* الميزات القادمة */
+.coming-soon {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(74, 124, 89, 0.1);
+    border-radius: 15px;
+    border: 2px dashed #4a7c59;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: #2d5016;
+    font-weight: 500;
+}
+
+.feature-item i {
+    color: #4a7c59;
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+/* أزرار العمل */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #4a7c59 0%, #2d5016 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 124, 89, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #4a7c59;
+}
+
+.btn-secondary:hover {
+    background: #4a7c59;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* تذييل الصفحة */
+.page-footer {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-text-ar {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.footer-text-en {
+    font-size: 1rem;
+    color: #d4e6d4;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+/* الهلال الإسلامي في الخلفية */
+.crescent-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25rem;
+    color: rgba(255, 255, 255, 0.05);
+    z-index: -1;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .title-ar {
+        font-size: 2rem;
+    }
+    
+    .title-en {
+        font-size: 1.1rem;
+    }
+    
+    .construction-container {
+        padding: 30px 25px;
+        margin: 0 10px;
+    }
+    
+    .construction-icon {
+        font-size: 3rem;
+    }
+    
+    .construction-title-ar {
+        font-size: 1.6rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+    
+    .back-btn {
+        position: static;
+        transform: none;
+        margin-bottom: 20px;
+        align-self: flex-start;
+    }
+    
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .crescent-background {
+        font-size: 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prophet-reminder {
+        padding: 6px 15px;
+        top: 5px;
+    }
+    
+    .reminder-ar {
+        font-size: 0.8rem;
+    }
+    
+    .reminder-en {
+        font-size: 0.7rem;
+    }
+    
+    .page-container {
+        padding-top: 60px;
+    }
+    
+    .construction-container {
+        padding: 25px 20px;
+    }
+    
+    .feature-item {
+        font-size: 0.9rem;
+    }
+    
+    .coming-soon {
+        padding: 15px;
+    }
+}

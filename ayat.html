@@ -1,178 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>آيات لكل شعور - BASIRA IMAN</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="ayat-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- شريط التذكير بالصلاة على النبي -->
-    <div class="prophet-reminder">
-        <div class="reminder-content">
-            <span class="reminder-ar">صل على النبي محمد 💚</span>
-            <span class="reminder-en">Peace and blessings be upon our Prophet Muhammad 💚</span>
-        </div>
-    </div>
-
-    <div class="container">
-        <!-- العنوان والتنقل -->
-        <header class="page-header">
-            <button class="back-button" onclick="goHome()">
-                <i class="fas fa-arrow-right"></i>
-                <span>العودة للرئيسية</span>
-            </button>
-            
-            <div class="page-title">
-                <h1 class="title-ar">آيات لكل شعور</h1>
-                <h2 class="title-en">Verses for Every Feeling</h2>
-            </div>
-        </header>
-
-        <!-- شريط البحث -->
-        <div class="search-section">
-            <div class="search-container">
-                <i class="fas fa-search search-icon"></i>
-                <input 
-                    type="text" 
-                    id="feelingSearch" 
-                    class="search-input" 
-                    placeholder="ابحث عن شعور معين... / Search for a feeling..."
-                >
-                <button class="clear-search" onclick="clearSearch()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- شبكة المشاعر -->
-        <main class="feelings-section">
-            <div class="feelings-grid" id="feelingsGrid">
-                <!-- شعور السعادة -->
-                <div class="feeling-card happy-feeling" data-feeling="سعيد" onclick="navigateToFeeling('happy')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">سعيد؟</h3>
-                        <p class="feeling-name-en">Happy?</p>
-                        <p class="feeling-description">آيات تزيد من فرحتك وامتنانك</p>
-                    </div>
-                </div>
-
-                <!-- شعور الغضب -->
-                <div class="feeling-card angry-feeling" data-feeling="غاضب" onclick="navigateToFeeling('angry')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">غاضب؟</h3>
-                        <p class="feeling-name-en">Angry?</p>
-                        <p class="feeling-description">آيات تهدئ من غضبك وتسكن قلبك</p>
-                    </div>
-                </div>
-
-                <!-- شعور الحزن -->
-                <div class="feeling-card sad-feeling" data-feeling="حزين" onclick="navigateToFeeling('sad')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">حزين؟</h3>
-                        <p class="feeling-name-en">Sad?</p>
-                        <p class="feeling-description">آيات تواسي حزنك وتشفي قلبك</p>
-                    </div>
-                </div>
-
-                <!-- شعور الوحدة -->
-                <div class="feeling-card lonely-feeling" data-feeling="وحيد" onclick="navigateToFeeling('lonely')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">وحيد؟</h3>
-                        <p class="feeling-name-en">Lonely?</p>
-                        <p class="feeling-description">آيات تذكرك بأن الله معك دائماً</p>
-                    </div>
-                </div>
-
-                <!-- شعور الخوف -->
-                <div class="feeling-card afraid-feeling" data-feeling="خائف" onclick="navigateToFeeling('afraid')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">خائف؟</h3>
-                        <p class="feeling-name-en">Afraid?</p>
-                        <p class="feeling-description">آيات تبعث الأمان والطمأنينة</p>
-                    </div>
-                </div>
-
-                <!-- شعور التوبة -->
-                <div class="feeling-card repentant-feeling" data-feeling="تائب" onclick="navigateToFeeling('repentant')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-hands"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">تائب؟</h3>
-                        <p class="feeling-name-en">Repentant?</p>
-                        <p class="feeling-description">آيات تبشرك برحمة الله ومغفرته</p>
-                    </div>
-                </div>
-
-                <!-- شعور الضياع -->
-                <div class="feeling-card lost-feeling" data-feeling="ضائع" onclick="navigateToFeeling('lost')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-compass"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">ضائع؟</h3>
-                        <p class="feeling-name-en">Lost?</p>
-                        <p class="feeling-description">آيات ترشدك إلى الطريق المستقيم</p>
-                    </div>
-                </div>
-
-                <!-- رسالة خاصة -->
-                <div class="feeling-card message-feeling" data-feeling="رسالة" onclick="navigateToFeeling('message')">
-                    <div class="feeling-icon">
-                        <i class="fas fa-envelope-open"></i>
-                    </div>
-                    <div class="feeling-content">
-                        <h3 class="feeling-name-ar">رسالة خاصة</h3>
-                        <p class="feeling-name-en">Special Message</p>
-                        <p class="feeling-description">رسالة مخصصة لك من القرآن الكريم</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- رسالة عدم وجود نتائج -->
-            <div class="no-results" id="noResults" style="display: none;">
-                <div class="no-results-content">
-                    <i class="fas fa-search"></i>
-                    <h3>لا توجد نتائج مطابقة</h3>
-                    <p>جرب البحث بكلمات أخرى أو تصفح جميع المشاعر</p>
-                </div>
-            </div>
-        </main>
-
-        <!-- تذييل الصفحة -->
-        <footer class="page-footer">
-            <div class="footer-content">
-                <p class="footer-text-ar">اختر الشعور الذي يناسب حالتك الآن</p>
-                <p class="footer-text-en">Choose the feeling that matches your current state</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- الهلال الإسلامي في الخلفية -->
-    <div class="crescent-background">
-        <i class="fas fa-moon"></i>
-    </div>
-
-    <script src="script.js"></script>
-    <script src="correct-ayat-script.js"></script>
-</body>
-</html>

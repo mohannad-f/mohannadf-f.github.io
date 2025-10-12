@@ -1,105 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أحاديث نبوية - BASIRA IMAN</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="simple-hadiths-styles.css">
-</head>
-<body>
-    <!-- تذكير الصلاة على النبي -->
-    <div class="prophet-reminder">
-        <p class="reminder-ar">صل على النبي محمد 💚</p>
-        <p class="reminder-en">Peace and blessings be upon our Prophet Muhammad</p>
-    </div>
-
-    <div class="page-container">
-        <!-- رأس الصفحة -->
-        <header class="page-header">
-            <div class="header-content">
-                <button class="back-btn" onclick="goBackToHome()">
-                    <i class="fas fa-arrow-right"></i>
-                    العودة
-                </button>
-                <div class="header-title">
-                    <h1 class="title-ar">أحاديث نبوية</h1>
-                    <p class="title-en">Prophetic Hadiths</p>
-                </div>
-            </div>
-        </header>
-
-        <!-- المحتوى الرئيسي -->
-        <main class="main-content">
-            <div class="hadiths-section">
-                <div class="section-intro">
-                    <h2 class="intro-title-ar">مجموعة من الأحاديث النبوية الشريفة</h2>
-                    <p class="intro-title-en">A Collection of Noble Prophetic Hadiths</p>
-                    <p class="intro-description">
-                        اختر من الأقسام التالية للاطلاع على الأحاديث النبوية الشريفة مع شروحاتها
-                    </p>
-                </div>
-
-                <!-- خيار واحد فقط: يتم التعديل -->
-                <div class="hadiths-grid">
-                    <div class="hadith-category-card" onclick="goToUnderConstruction()">
-                        <div class="category-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div class="category-content">
-                            <h3 class="category-name-ar">يتم التعديل</h3>
-                            <p class="category-name-en">Under Construction</p>
-                            <p class="category-description">
-                                نعمل حالياً على إضافة الأحاديث النبوية الشريفة
-                            </p>
-                            <div class="category-status">
-                                <span class="status-badge">قريباً</span>
-                            </div>
-                        </div>
-                        <div class="category-arrow">
-                            <i class="fas fa-arrow-left"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- معلومات إضافية -->
-                <div class="additional-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-info-circle"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>ما سيتم إضافته قريباً:</h4>
-                            <ul>
-                                <li>أحاديث في العقيدة والإيمان</li>
-                                <li>أحاديث في العبادات والأخلاق</li>
-                                <li>أحاديث في المعاملات والآداب</li>
-                                <li>شروحات مفصلة لكل حديث</li>
-                                <li>خاصية البحث في الأحاديث</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- تذييل الصفحة -->
-        <footer class="page-footer">
-            <div class="footer-content">
-                <p class="footer-text-ar">نعمل بجد لتقديم أفضل المحتويات الإسلامية</p>
-                <p class="footer-text-en">We work hard to provide the best Islamic content</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- الهلال الإسلامي في الخلفية -->
-    <div class="crescent-background">
-        <i class="fas fa-moon"></i>
-    </div>
-
-    <script src="simple-hadiths-script.js"></script>
-</body>
-</html>
